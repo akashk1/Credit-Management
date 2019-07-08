@@ -1,0 +1,20 @@
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Current Credits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr > 
+      <th scope="row">1</th>
+      <!-- <td>{{creditMGMT.allUsersDetail[id].name}}</td>
+      <td>{{creditMGMT.allUsersDetail[id].email}}</td>
+      <td>{{creditMGMT.allUsersDetail[id].current_credit}}</td> -->
+      <td>{{userDetail.name}}</td>
+      <td>{{userDetail.email}}</td>
+      <td>{{userDetail.current_credit}}</td>
+      <button class="btn btn-primary" (click)="sendCredit(userDetail._id)">Send Credits To</button>
+      </tr></tbody></table>

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+<div class="col-xs-12 ">
+      <h2 > Send Credit </h2>
+      <form class="form-inline" style="margin-top:100px" >
+        <label for="text"  style="margin-right:10px">From</label><br>
+        <input type="text" [(ngModel)]="from" name="from" ngModel required class="form-control" ><br>
+        <label for="text" style="margin-right:10px" >To</label><br>
+        <input type="text" style="margin-left:10px"  [(ngModel)]="email" name="email" ngModel required  class="form-control"><br>
+        <label for="text" style="margin-right:10px" >credit</label><br>
+        <input type="number" style="margin-left:10px"  [(ngModel)]="credit" name="credit" ngModel required   class="form-control"><br>
+      
+        <button type="submit" style="margin-left:10px"  (click)="send()"class="btn btn-primary">Send</button>
+      </form> 
+      </div>
+    
+      </div>
+      <div class="alert alert-danger alert-dismissible" *ngIf="this.error==1">
+        <button type="button" class="close" (click)="Error()" data-dismiss="alert">&times;</button>
+        <strong>{{errorText}}</strong> 
+</div>
+<div class="alert alert-success alert-dismissible" *ngIf="this.error==0">
+  <button type="button" class="close" (click)="Error()" data-dismiss="alert">&times;</button>
+  <strong>{{errorText}}</strong> 
+</div>
+    </div>
