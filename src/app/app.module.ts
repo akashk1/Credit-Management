@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CreditMgmtComponent } from './credit-mgmt/credit-mgmt.component';
 import { ViewAllUsersComponent } from './view-all-users/view-all-users.component';
 import { ViewDetailComponent } from './view-detail/view-detail.component';
 import { AppRouting } from './app-routing.module';
@@ -17,7 +16,6 @@ import { CreditMgmtService } from './credit-mgmt.service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    CreditMgmtComponent,
     ViewAllUsersComponent,
     ViewDetailComponent,
     SendCreditComponent
