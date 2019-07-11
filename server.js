@@ -5,12 +5,17 @@ var mongoose=require('mongoose');
 
 var bodyparser=require('body-parser');
 var cors=require('cors');
-var UserRoutes=require('./routes/user');
+var UserRoutes=require('./backend/routes/user');
+
 var app=express();
 //app.use(cors())
-app.get('/',(req,res)=>{
-  res.send('../../dist/creditManagement/index.html')
-})
+app.use(express.static(path.join(__dirname, 'dist/creditManagement')));
+
+//Send all other requests to the Angular app
+app.get('/', (req, res)=> {
+    res.sendFile(path.join(__dirname, 'dist/creditManagement/index.html'));
+});
+
 mongoose.connect('mongodb://test:test123@ds347917.mlab.com:47917/credit-management',{
     useCreateIndex: true,
     useNewUrlParser: true

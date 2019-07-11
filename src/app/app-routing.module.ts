@@ -8,6 +8,9 @@ import { ViewDetailComponent } from "./view-detail/view-detail.component";
 import { SendCreditComponent } from "./send-credit/send-credit.component";
 const appRoutes:Routes=[
     {
+        path:'',component:ViewAllUsersComponent
+    },
+    {
         path:'view-all-users',component:ViewAllUsersComponent
     },{
         path:'view-detail/:id/:index',component:ViewDetailComponent
