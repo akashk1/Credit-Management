@@ -9,11 +9,11 @@ var UserRoutes=require('./backend/routes/user');
 
 var app=express();
 //app.use(cors())
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist/creditManagement')));
 
 //Send all other requests to the Angular app
 app.get('/', (req, res)=> {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/creditManagement/index.html'));
 });
 
 mongoose.connect('mongodb://test:test123@ds347917.mlab.com:47917/credit-management',{
