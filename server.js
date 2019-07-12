@@ -27,7 +27,7 @@ mongoose.connect('mongodb://test:test123@ds347917.mlab.com:47917/credit-manageme
 // });
 
 app.use(bodyparser.json());
-app.use('/user',UserRoutes);
+app.use('/api/user',UserRoutes);
 
 
 
